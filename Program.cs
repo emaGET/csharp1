@@ -22,6 +22,8 @@ namespace ConsoleApplication1_csharp1
             Console.Write("And this is the second (more like the fifth) line");
 
             // end of part 1
+
+            Console.WriteLine("Hello World, from See Sharp! Remember your glasses");
         }
     }
 }
