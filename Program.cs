@@ -15,15 +15,19 @@ namespace ConsoleApplication1_csharp1
             // Console.WriteLine('Hi world');
             // also does not work because we need " and not '
             
-            Console.WriteLine("Congrats!");
+            Console.Write("Congrats!");
             Console.WriteLine("");
             // Console.WriteLine("First lines of code achieved!");
             Console.WriteLine("First lines of code achieved!");
-            Console.Write("And this is the second (more like the fifth) line");
+            Console.WriteLine("And this is the second (more like the fifth) line");
 
             // end of part 1
 
             Console.WriteLine("Hello World, from See Sharp! Remember your glasses");
+            Console.Write("What is your name? ");
+            
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello " + name + "! Welcome to the optometrist.");
         }
     }
 }
