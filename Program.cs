@@ -32,7 +32,9 @@ namespace ConsoleApplication1_csharp1
             Console.WriteLine("What is you age?");
             int age = Convert.ToInt32(Console.ReadLine());
             int yearBorn = 2026 - age;
-            Console.WriteLine("Your age is " + age + ", then you were born in " + yearBorn + " if you hadn't a birthday yet.");
+            // Console.WriteLine("Your age is " + age + ", then you were born in " + yearBorn + " if you hadn't a birthday yet.");
+            Console.WriteLine($"Your age is {age}, then you were born in {yearBorn}, if you hadn't a birthday yet. Otherwise, {yearBorn-1}");
+            
         }
     }
 }
