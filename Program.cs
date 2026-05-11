@@ -7,6 +7,7 @@ namespace ConsoleApplication1_csharp1
         public static void Main(string[] args)
         {
             var city = "Tromsø";
+            char tInit = 'T';
             int inhabitants = 79604;
             var message = "well i do not know what else to do now, let's see... ";
             var question = "Do you enjoy football? Like in Alfheim stadium.";
@@ -14,7 +15,7 @@ namespace ConsoleApplication1_csharp1
             var weather = "yesterday was 5 degrees, today is half of that. what is the temperature today?";
             
             Console.WriteLine("Hello World, from See Sharp! Remember your glasses");
-            Console.WriteLine($"We are {inhabitants} here in {city}.");
+            Console.WriteLine($"We are {inhabitants} here in {city}. Its initial is {tInit}, specified just to use a char...");
             Console.Write("What is your name? ");
             
             string name = Console.ReadLine();
