@@ -11,6 +11,7 @@ namespace ConsoleApplication1_csharp1
             var message = "well i do not know what else to do now, let's see... ";
             var question = "Do you enjoy football? Like in Alfheim stadium.";
             var ball = "How much do you enjoy football, from 0 to 10?";
+            var weather = "yesterday was 5 degrees, today is half of that. what is the temperature today?";
             
             Console.WriteLine("Hello World, from See Sharp! Remember your glasses");
             Console.WriteLine($"We are {inhabitants} here in {city}.");
@@ -42,8 +43,13 @@ namespace ConsoleApplication1_csharp1
             
             Greet(message);
             int ballInterest = AskForInt(ball);
-            Console.WriteLine($"You care {ballInterest} out of 10.");
+            Console.WriteLine($"very well, you care {ballInterest} out of 10.");
             
+            Console.WriteLine("let's go back to the weather chitchat, then...");
+
+            int weather = AskForDouble(weather);
+
+
         }
 
         public static void Greet(string message)
@@ -61,6 +67,12 @@ namespace ConsoleApplication1_csharp1
         {
             var answerStr = Ask(ball);
             return Convert.ToInt32(answerStr);
+        }
+
+        public static double AskForDouble(string weather)
+        {
+            var answerStr = Ask(weather);
+            return Convert.ToDouble(answerStr);
         }
     }
 }
