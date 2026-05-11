@@ -44,10 +44,11 @@ namespace ConsoleApplication1_csharp1
             Greet(message);
             int ballInterest = AskForInt(ball);
             Console.WriteLine($"very well, you care {ballInterest} out of 10.");
-            
+            Console.WriteLine(" ");
             Console.WriteLine("let's go back to the weather chitchat, then...");
 
-            int weather = AskForDouble(weather);
+            double todayTemp = AskForDouble(weather);
+            Console.WriteLine($"Then the weather today is {todayTemp}");
 
 
         }
@@ -69,7 +70,7 @@ namespace ConsoleApplication1_csharp1
             return Convert.ToInt32(answerStr);
         }
 
-        public static double AskForDouble(string weather)
+        public static double AskForDouble(string weather)   // to this we have to reply with a comma , not with a full stop .
         {
             var answerStr = Ask(weather);
             return Convert.ToDouble(answerStr);
