@@ -45,7 +45,7 @@ namespace ConsoleApplication1_csharp1
                 // the previous code is obsolete, the following is improved;
                 // still boolean, still if~else , better structure that may even be reused.
             
-            bool bdayYet = AskForBool("Have you had your birthday this year?");
+            bool bdayYet = MyConsole.AskForBool("Have you had your birthday this year?");
             if (bdayYet)
             {
                 Console.WriteLine($"then you are from {yearBorn}");
@@ -56,13 +56,13 @@ namespace ConsoleApplication1_csharp1
             }
             
             Greet(message);
-            int ballInterest = AskForInt(ball);
+            int ballInterest = MyConsole.AskForInt(ball);
             Console.WriteLine($"very well, you care {ballInterest} out of 10.");
             Console.WriteLine(" ");
             Console.WriteLine("let's go back to the weather chitchat, then...");
 
-            double todayTemp = AskForDouble(weather);
-            Console.WriteLine($"Then the weather today is {todayTemp}");
+            double todayTemp = MyConsole.AskForDouble(weather);
+            Console.WriteLine($"In fact, today's weather is {todayTemp}");
 
 
         }
