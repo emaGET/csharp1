@@ -4,6 +4,11 @@ namespace ConsoleApplication1_csharp1
 {
     internal class MyConsole
     {
+        public static void Greet(string boh)
+        {
+            Console.WriteLine(boh);
+        }
+        
         public static string Ask(string question)
         {
             Console.WriteLine(question + " ");
@@ -27,6 +32,5 @@ namespace ConsoleApplication1_csharp1
             var answerStr = Ask(bDayYet + " y/n");
             return answerStr.ToLower().StartsWith("y");
         }
-
     }
 }

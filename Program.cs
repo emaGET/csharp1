@@ -9,7 +9,7 @@ namespace ConsoleApplication1_csharp1
             var city = "Tromsø";
             char tInit = 'T';
             int inhabitants = 79604;
-            var message = "well i do not know what else to do now, let's see... ";
+            var boh = "well i do not know what else to do now, let's see... ";
             var question = "Do you enjoy football? Like in Alfheim stadium.";
             var ball = "How much do you enjoy football, from 0 to 10?";
             var weather = "yesterday was 5 degrees, today is half of that. what is the temperature today?";
@@ -55,7 +55,7 @@ namespace ConsoleApplication1_csharp1
                 Console.WriteLine($"then you are from {yearBorn-1}");
             }
             
-            Greet(message);
+            MyConsole.Greet(boh);
             int ballInterest = MyConsole.AskForInt(ball);
             Console.WriteLine($"very well, you care {ballInterest} out of 10.");
             Console.WriteLine(" ");
@@ -63,38 +63,6 @@ namespace ConsoleApplication1_csharp1
 
             double todayTemp = MyConsole.AskForDouble(weather);
             Console.WriteLine($"In fact, today's weather is {todayTemp}");
-
-
-        }
-
-        public static bool AskForBool(string bDayYet)
-        {
-            var answerStr = Ask(bDayYet + " y/n");
-            return answerStr.ToLower().StartsWith("y");
-        }
-        
-
-        public static void Greet(string message)
-        {
-            Console.WriteLine(message);
-        }
-
-        public static string Ask(string question)
-        {
-            Console.WriteLine(question + " ");
-            return Console.ReadLine();
-        }
-
-        public static int AskForInt(string ball)
-        {
-            var answerStr = Ask(ball);
-            return Convert.ToInt32(answerStr);
-        }
-
-        public static double AskForDouble(string weather)   // to this we have to reply with a comma , not with a full stop .
-        {
-            var answerStr = Ask(weather);
-            return Convert.ToDouble(answerStr);
         }
     }
 }
