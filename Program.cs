@@ -29,13 +29,26 @@ namespace ConsoleApplication1_csharp1
             Console.WriteLine($"Your age is {age}, let's figure out your birth year.");
             
                 // let's begin with bool!
+                
+            // Console.WriteLine("Have you had your birthday this year? (y/n) ");
+            // string bdAlready = Console.ReadLine();
+            // bool hadBday  = bdAlready == "y";
+            // if (hadBday)
+            // {
+            //     Console.WriteLine($"well then you must be from {yearBorn}");
+            // }
+            // else
+            // {
+            //     Console.WriteLine($"then you are from {yearBorn-1}");
+            // }
             
-            Console.WriteLine("Have you had your birthday this year? (y/n) ");
-            string bdAlready = Console.ReadLine();
-            bool hadBday  = bdAlready == "y";
-            if (hadBday)
+                // the previous code is obsolete, the following is improved;
+                // still boolean, still if~else , better structure that may even be reused.
+            
+            bool bdayYet = AskForBool("Have you had your birthday this year?");
+            if (bdayYet)
             {
-                Console.WriteLine($"well then you must be from {yearBorn}");
+                Console.WriteLine($"then you are from {yearBorn}");
             }
             else
             {
@@ -53,6 +66,13 @@ namespace ConsoleApplication1_csharp1
 
 
         }
+
+        public static bool AskForBool(string bDayYet)
+        {
+            var answerStr = Ask(bDayYet + " y/n");
+            return answerStr.ToLower().StartsWith("y");
+        }
+        
 
         public static void Greet(string message)
         {
